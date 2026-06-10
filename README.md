@@ -100,8 +100,15 @@ User selects node on Fabric Canvas
 ```
 aetherweaver/
 ├── app.py                    # Main Streamlit application
+├── mcp_server.py             # MCP Server — 4 tools for GitHub Copilot
+├── eval.py                   # 78-test evaluation suite
+├── copilot_usage.md          # GitHub Copilot usage documentation
 ├── requirements.txt
 ├── .gitignore
+├── .streamlit/
+│   └── config.toml           # Dark theme configuration
+├── .vscode/
+│   └── mcp.json              # VS Code MCP server configuration
 ├── agents/
 │   ├── __init__.py
 │   └── lore_weaver.py        # Fabric Lore Weaver agent + TellTheFabricTale skill
@@ -111,13 +118,72 @@ aetherweaver/
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start — Web App
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/aetherweaver
 cd aetherweaver
 python -m venv .venv
 .venv\Scripts\activate   # Windows
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Open `http://localhost:8501`
+
+---
+
+## ◈ MCP Server — Use Inside GitHub Copilot
+
+Aether Weaver ships as a fully functional MCP server. Install it in VS Code and use the Fabric Lore Weaver directly inside GitHub Copilot Agent Mode.
+
+### Setup
+
+**Step 1 — Install dependencies**
+```bash
+pip install mcp streamlit
+```
+
+**Step 2 — The `.vscode/mcp.json` is already included in the repo**
+```json
+{
+  "servers": {
+    "aether-weaver": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["${workspaceFolder}/mcp_server.py"]
+    }
+  }
+}
+```
+
+**Step 3 — Open GitHub Copilot Chat in VS Code**
+- Switch to **Agent Mode** (click the mode dropdown in Copilot Chat)
+- The `aether-weaver` server will appear automatically
+
+**Step 4 — Try these prompts in Copilot:**
+
+```
+List all entities in the Fabric IQ data fabric
+```
+```
+Get the lore of E001
+```
+```
+What is the health status of the entire fabric?
+```
+```
+Show me the data lineage for E005
+```
+
+### Available MCP Tools
+
+| Tool | What It Does |
+|---|---|
+| `get_entity_lore` | Weave a poetic narrative for any Fabric IQ entity |
+| `list_fabric_entities` | List all 7 entities with type, archetype, health |
+| `get_fabric_health` | Full fabric health report with warnings and anomalies |
+| `get_entity_lineage` | Upstream/downstream lineage map with relationship types |
 pip install -r requirements.txt
 streamlit run app.py
 ```
