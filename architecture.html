@@ -9,7 +9,7 @@
 </style>
 </head>
 <body>
-<svg viewBox="0 0 1200 680" xmlns="http://www.w3.org/2000/svg" width="1200" height="680">
+<svg viewBox="0 0 1200 780" xmlns="http://www.w3.org/2000/svg" width="1200" height="780">
 <defs>
   <radialGradient id="bg" cx="50%" cy="50%" r="60%">
     <stop offset="0%" style="stop-color:#0d1b3e;stop-opacity:1"/>
@@ -23,16 +23,17 @@
     <stop offset="50%" style="stop-color:#818cf8"/>
     <stop offset="100%" style="stop-color:#a78bfa"/>
   </linearGradient>
-  <!-- Node gradients -->
-  <radialGradient id="ng1" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.5"/><stop offset="100%" style="stop-color:#6366f1;stop-opacity:0.05"/></radialGradient>
-  <radialGradient id="ng2" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.5"/><stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.05"/></radialGradient>
-  <radialGradient id="ng3" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.5"/><stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.05"/></radialGradient>
-  <radialGradient id="ng4" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:#10b981;stop-opacity:0.5"/><stop offset="100%" style="stop-color:#10b981;stop-opacity:0.05"/></radialGradient>
-  <radialGradient id="ng5" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.5"/><stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.05"/></radialGradient>
+  <!-- Arrow markers -->
+  <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#6366f1"/></marker>
+  <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#10b981"/></marker>
+  <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#8b5cf6"/></marker>
+  <marker id="arr4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/></marker>
+  <marker id="arr5" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#06b6d4"/></marker>
+  <marker id="arrG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#4ade80"/></marker>
 </defs>
 
 <!-- Background -->
-<rect width="1200" height="680" fill="url(#bg)"/>
+<rect width="1200" height="780" fill="url(#bg)"/>
 
 <!-- Grid -->
 <g opacity="0.04">
@@ -42,190 +43,219 @@
   <line x1="0" y1="400" x2="1200" y2="400" stroke="#6366f1" stroke-width="0.5"/>
   <line x1="0" y1="500" x2="1200" y2="500" stroke="#6366f1" stroke-width="0.5"/>
   <line x1="0" y1="600" x2="1200" y2="600" stroke="#6366f1" stroke-width="0.5"/>
-  <line x1="200" y1="0" x2="200" y2="680" stroke="#6366f1" stroke-width="0.5"/>
-  <line x1="400" y1="0" x2="400" y2="680" stroke="#6366f1" stroke-width="0.5"/>
-  <line x1="600" y1="0" x2="600" y2="680" stroke="#6366f1" stroke-width="0.5"/>
-  <line x1="800" y1="0" x2="800" y2="680" stroke="#6366f1" stroke-width="0.5"/>
-  <line x1="1000" y1="0" x2="1000" y2="680" stroke="#6366f1" stroke-width="0.5"/>
+  <line x1="0" y1="700" x2="1200" y2="700" stroke="#6366f1" stroke-width="0.5"/>
+  <line x1="200" y1="0" x2="200" y2="780" stroke="#6366f1" stroke-width="0.5"/>
+  <line x1="400" y1="0" x2="400" y2="780" stroke="#6366f1" stroke-width="0.5"/>
+  <line x1="600" y1="0" x2="600" y2="780" stroke="#6366f1" stroke-width="0.5"/>
+  <line x1="800" y1="0" x2="800" y2="780" stroke="#6366f1" stroke-width="0.5"/>
+  <line x1="1000" y1="0" x2="1000" y2="780" stroke="#6366f1" stroke-width="0.5"/>
 </g>
 
 <!-- Title -->
-<text x="600" y="44" text-anchor="middle" font-family="Georgia,serif" font-size="26" font-weight="700" fill="url(#titleGrad)" filter="url(#glow)">✦  Aether Weaver</text>
-<text x="600" y="66" text-anchor="middle" font-family="Georgia,serif" font-size="12" font-style="italic" fill="#475569">The Pulse of Your Data Fabric, Manifested — Architecture Diagram</text>
+<text x="600" y="38" text-anchor="middle" font-family="Georgia,serif" font-size="24" font-weight="700" fill="url(#titleGrad)" filter="url(#glow)">✦  Aether Weaver</text>
+<text x="600" y="58" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-style="italic" fill="#475569">The Pulse of Your Data Fabric, Manifested — Full Architecture</text>
 
-<!-- ─── USER INPUT ─── -->
-<rect x="476" y="82" width="248" height="44" rx="8" fill="#0f172a" stroke="#6366f1" stroke-width="1.5"/>
-<text x="600" y="99" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b" letter-spacing="1">USER INTERACTION</text>
-<text x="600" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">Select Node on Fabric Canvas</text>
+<!-- ─── TWO ENTRY POINTS ─── -->
+<!-- Streamlit Web App entry -->
+<rect x="90" y="76" width="210" height="44" rx="8" fill="#0f172a" stroke="#6366f1" stroke-width="1.5"/>
+<text x="195" y="93" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b" letter-spacing="1">ENTRY POINT 1</text>
+<text x="195" y="110" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="600" fill="#e2e8f0">Streamlit Web App</text>
 
-<!-- Arrow down -->
-<line x1="600" y1="126" x2="600" y2="150" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr1)"/>
-<defs><marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#6366f1"/></marker>
-<marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#10b981"/></marker>
-<marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#8b5cf6"/></marker>
-<marker id="arr4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/></marker>
-<marker id="arr5" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#06b6d4"/></marker>
-<marker id="arrW" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/></marker>
-</defs>
+<!-- MCP Server entry -->
+<rect x="900" y="76" width="210" height="44" rx="8" fill="#0a1a0f" stroke="#10b981" stroke-width="2" filter="url(#glow3)"/>
+<text x="1005" y="93" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b" letter-spacing="1">ENTRY POINT 2</text>
+<text x="1005" y="110" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="600" fill="#4ade80">GitHub Copilot + MCP</text>
+
+<!-- MCP Tools box -->
+<rect x="860" y="132" width="290" height="108" rx="10" fill="#060f08" stroke="#10b981" stroke-width="1.5" filter="url(#glow3)"/>
+<text x="1005" y="151" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#4ade80" letter-spacing="1.5">◈  MCP SERVER — 4 TOOLS</text>
+<text x="1005" y="168" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">get_entity_lore · list_fabric_entities</text>
+<text x="1005" y="183" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">get_fabric_health · get_entity_lineage</text>
+<rect x="876" y="192" width="258" height="36" rx="6" fill="#0f1f10" stroke="#10b981" stroke-width="1"/>
+<text x="1005" y="207" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">VS Code Agent Mode → .vscode/mcp.json</text>
+<text x="1005" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-style="italic" fill="#4ade80">"Get the lore of E005" → runs in Copilot</text>
+
+<!-- Arrows from entry points -->
+<line x1="195" y1="120" x2="195" y2="155" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr1)"/>
+<line x1="1005" y1="120" x2="1005" y2="130" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrG)"/>
+
+<!-- Arrow from MCP to Lore Weaver -->
+<line x1="1005" y1="240" x2="860" y2="270" stroke="#10b981" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr2)"/>
 
 <!-- ─── LORE WEAVER AGENT BOX ─── -->
-<rect x="340" y="152" width="520" height="108" rx="12" fill="#0a0e1a" stroke="#6366f1" stroke-width="2" filter="url(#glow3)"/>
-<rect x="340" y="152" width="520" height="28" rx="12" fill="#1e1b4b"/>
-<rect x="340" y="168" width="520" height="12" fill="#1e1b4b"/>
-<text x="600" y="170" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#a5b4fc" letter-spacing="2">FABRIC LORE WEAVER AGENT — TellTheFabricTale Skill</text>
+<rect x="130" y="157" width="700" height="108" rx="12" fill="#0a0e1a" stroke="#6366f1" stroke-width="2" filter="url(#glow3)"/>
+<rect x="130" y="157" width="700" height="28" rx="12" fill="#1e1b4b"/>
+<rect x="130" y="173" width="700" height="12" fill="#1e1b4b"/>
+<text x="480" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#a5b4fc" letter-spacing="2">FABRIC LORE WEAVER AGENT — TellTheFabricTale Skill</text>
 
-<!-- 3 steps inside agent box -->
-<rect x="356" y="188" width="148" height="60" rx="7" fill="#0f172a" stroke="#6366f1" stroke-width="1"/>
-<text x="430" y="204" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="600" fill="#818cf8">TOOL 1</text>
-<text x="430" y="218" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">get_entity_by_id()</text>
-<text x="430" y="232" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">Retrieve from Fabric IQ</text>
-<text x="430" y="244" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">synthetic ontology</text>
+<!-- 3 tool boxes inside agent -->
+<rect x="146" y="193" width="200" height="60" rx="7" fill="#0f172a" stroke="#6366f1" stroke-width="1"/>
+<text x="246" y="209" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="600" fill="#818cf8">TOOL 1</text>
+<text x="246" y="223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">get_entity_by_id()</text>
+<text x="246" y="237" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">Retrieve from Fabric IQ</text>
+<text x="246" y="249" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">synthetic ontology</text>
 
-<rect x="526" y="188" width="148" height="60" rx="7" fill="#0f172a" stroke="#6366f1" stroke-width="1"/>
-<text x="600" y="204" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="600" fill="#818cf8">TOOL 2</text>
-<text x="600" y="218" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">get_entity_relationships()</text>
-<text x="600" y="232" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">Upstream / downstream</text>
-<text x="600" y="244" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">lineage graph</text>
+<rect x="380" y="193" width="200" height="60" rx="7" fill="#0f172a" stroke="#6366f1" stroke-width="1"/>
+<text x="480" y="209" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="600" fill="#818cf8">TOOL 2</text>
+<text x="480" y="223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">get_entity_relationships()</text>
+<text x="480" y="237" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">Upstream / downstream</text>
+<text x="480" y="249" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">lineage graph</text>
 
-<rect x="696" y="188" width="148" height="60" rx="7" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
-<text x="770" y="204" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="600" fill="#a78bfa">SKILL</text>
-<text x="770" y="218" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">TellTheFabricTale</text>
-<text x="770" y="232" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">6-step narrative</text>
-<text x="770" y="244" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">weaving pipeline</text>
+<rect x="614" y="193" width="200" height="60" rx="7" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="714" y="209" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="600" fill="#a78bfa">SKILL</text>
+<text x="714" y="223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">TellTheFabricTale</text>
+<text x="714" y="237" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">6-step narrative</text>
+<text x="714" y="249" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">weaving pipeline</text>
 
-<!-- Tool arrows -->
-<line x1="504" y1="218" x2="524" y2="218" stroke="#6366f1" stroke-width="1.2" marker-end="url(#arr1)"/>
-<line x1="674" y1="218" x2="694" y2="218" stroke="#6366f1" stroke-width="1.2" marker-end="url(#arr1)"/>
+<!-- Tool flow arrows -->
+<line x1="346" y1="223" x2="378" y2="223" stroke="#6366f1" stroke-width="1.2" marker-end="url(#arr1)"/>
+<line x1="580" y1="223" x2="612" y2="223" stroke="#6366f1" stroke-width="1.2" marker-end="url(#arr1)"/>
 
-<!-- ─── FABRIC IQ BANNER ─── -->
-<rect x="46" y="152" width="270" height="108" rx="12" fill="#0a0e1a" stroke="#8b5cf6" stroke-width="1.5" filter="url(#glow3)"/>
-<text x="181" y="172" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#a78bfa" letter-spacing="1.5">⬡  FABRIC IQ ONTOLOGY</text>
-<text x="181" y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" fill="#cbd5e1">7 Entities · 7 Relationships</text>
-<text x="181" y="207" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Lakehouse · Dataflow</text>
-<text x="181" y="221" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Semantic Model · Power BI</text>
-<text x="181" y="235" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Data Warehouse · ML Model</text>
-<text x="181" y="249" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Event Stream</text>
+<!-- Fabric IQ box left -->
+<rect x="46" y="157" width="70" height="108" rx="8" fill="#0a0e1a" stroke="#8b5cf6" stroke-width="1.2"/>
+<text x="81" y="205" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" font-weight="700" fill="#a78bfa" writing-mode="tb" transform="rotate(-90,81,211)">FABRIC IQ</text>
+<line x1="116" y1="211" x2="144" y2="211" stroke="#8b5cf6" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arr3)"/>
 
-<!-- Arrow Fabric IQ → Tool 1 -->
-<line x1="316" y1="206" x2="354" y2="206" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr3)"/>
+<!-- GitHub Copilot box right -->
+<rect x="836" y="157" width="20" height="108" rx="4" fill="#060f08" stroke="#10b981" stroke-width="1"/>
 
-<!-- ─── GITHUB COPILOT BADGE ─── -->
-<rect x="884" y="152" width="270" height="108" rx="12" fill="#0a0e1a" stroke="#10b981" stroke-width="1.5" filter="url(#glow3)"/>
-<text x="1019" y="172" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" fill="#4ade80" letter-spacing="1.5">◈  GITHUB COPILOT</text>
-<text x="1019" y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" fill="#cbd5e1">AI-Assisted Development</text>
-<text x="1019" y="207" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">SVG Canvas Engine</text>
-<text x="1019" y="221" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Narrative Pipeline</text>
-<text x="1019" y="235" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">CSS Design System</text>
-<text x="1019" y="249" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Eval Suite · Bug Fixes</text>
-
-<!-- Arrow down from Lore Weaver -->
-<line x1="600" y1="260" x2="600" y2="290" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr1)"/>
+<!-- Arrow down from agent -->
+<line x1="480" y1="265" x2="480" y2="295" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr1)"/>
 
 <!-- ─── 6-STEP PIPELINE ─── -->
-<text x="600" y="306" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569" letter-spacing="2">NARRATIVE PIPELINE — 6 STEPS</text>
+<text x="480" y="311" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569" letter-spacing="2">NARRATIVE PIPELINE — 6 STEPS</text>
 
-<!-- Step boxes -->
-<rect x="46" y="318" width="168" height="64" rx="8" fill="#0f172a" stroke="#6366f1" stroke-width="1"/>
-<text x="130" y="336" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#818cf8">STEP 1 + 2</text>
-<text x="130" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" fill="#e2e8f0">Archetype + Health</text>
-<text x="130" y="365" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">Resolve lore template</text>
-<text x="130" y="377" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">and mood tone</text>
+<rect x="46" y="322" width="155" height="62" rx="8" fill="#0f172a" stroke="#6366f1" stroke-width="1"/>
+<text x="123" y="339" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#818cf8">STEP 1+2</text>
+<text x="123" y="353" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#e2e8f0">Archetype + Health</text>
+<text x="123" y="366" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">Resolve lore + mood</text>
+<text x="123" y="378" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">tone from lookups</text>
 
-<rect x="230" y="318" width="168" height="64" rx="8" fill="#0f172a" stroke="#6366f1" stroke-width="1"/>
-<text x="314" y="336" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#818cf8">STEP 3 + 4</text>
-<text x="314" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" fill="#e2e8f0">Lineage Narrative</text>
-<text x="314" y="365" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">Upstream / downstream</text>
-<text x="314" y="377" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">poetic weaving</text>
+<rect x="216" y="322" width="155" height="62" rx="8" fill="#0f172a" stroke="#6366f1" stroke-width="1"/>
+<text x="293" y="339" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#818cf8">STEP 3+4</text>
+<text x="293" y="353" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#e2e8f0">Lineage Narrative</text>
+<text x="293" y="366" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">Upstream / downstream</text>
+<text x="293" y="378" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">poetic weaving</text>
 
-<rect x="414" y="318" width="168" height="64" rx="8" fill="#0f172a" stroke="#6366f1" stroke-width="1"/>
-<text x="498" y="336" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#818cf8">STEP 5</text>
-<text x="498" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" fill="#e2e8f0">Activity Pulse</text>
-<text x="498" y="365" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">Reads / writes / refresh</text>
-<text x="498" y="377" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">rate interpretation</text>
+<rect x="386" y="322" width="155" height="62" rx="8" fill="#0f172a" stroke="#6366f1" stroke-width="1"/>
+<text x="463" y="339" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#818cf8">STEP 5</text>
+<text x="463" y="353" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#e2e8f0">Activity Pulse</text>
+<text x="463" y="366" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">Reads/writes/refresh</text>
+<text x="463" y="378" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">rate interpretation</text>
 
-<rect x="598" y="318" width="168" height="64" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5"/>
-<text x="682" y="336" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#fbbf24">STEP 5b — ANOMALY</text>
-<text x="682" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" fill="#e2e8f0">Shadow Clause</text>
-<text x="682" y="365" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">If anomalies present:</text>
-<text x="682" y="377" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">disturbance narrative</text>
+<rect x="556" y="322" width="155" height="62" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5"/>
+<text x="633" y="339" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#fbbf24">STEP 5b ANOMALY</text>
+<text x="633" y="353" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#e2e8f0">Shadow Clause</text>
+<text x="633" y="366" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">If anomalies present:</text>
+<text x="633" y="378" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">disturbance narrative</text>
 
-<rect x="782" y="318" width="168" height="64" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
-<text x="866" y="336" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#a78bfa">STEP 6 + 7</text>
-<text x="866" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" fill="#e2e8f0">Compose + Insight</text>
-<text x="866" y="365" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">Full narrative + cited</text>
-<text x="866" y="377" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">insight summary</text>
+<rect x="726" y="322" width="155" height="62" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="803" y="339" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#a78bfa">STEP 6+7</text>
+<text x="803" y="353" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#e2e8f0">Compose + Insight</text>
+<text x="803" y="366" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">Full narrative + cited</text>
+<text x="803" y="378" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">insight summary</text>
 
-<rect x="966" y="318" width="188" height="64" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
-<text x="1060" y="336" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#4ade80">OUTPUT</text>
-<text x="1060" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" fill="#e2e8f0">Lore Scroll Panel</text>
-<text x="1060" y="365" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">Narrative + Insight</text>
-<text x="1060" y="377" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">Connections + Citation</text>
+<!-- Output box -->
+<rect x="896" y="322" width="258" height="62" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+<text x="1025" y="339" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="#4ade80">OUTPUT — DUAL SURFACE</text>
+<text x="1025" y="353" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#e2e8f0">Lore Scroll (Streamlit)</text>
+<text x="1025" y="366" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#4ade80">+ Copilot Chat (MCP)</text>
+<text x="1025" y="378" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">Narrative · Insight · Citation</text>
 
 <!-- Step arrows -->
-<line x1="214" y1="350" x2="228" y2="350" stroke="#6366f1" stroke-width="1.2" marker-end="url(#arr1)"/>
-<line x1="398" y1="350" x2="412" y2="350" stroke="#6366f1" stroke-width="1.2" marker-end="url(#arr1)"/>
-<line x1="582" y1="350" x2="596" y2="350" stroke="#6366f1" stroke-width="1.2" marker-end="url(#arr1)"/>
-<line x1="766" y1="350" x2="780" y2="350" stroke="#6366f1" stroke-width="1.2" marker-end="url(#arr1)"/>
-<line x1="950" y1="350" x2="964" y2="350" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr2)"/>
+<line x1="201" y1="353" x2="214" y2="353" stroke="#6366f1" stroke-width="1.2" marker-end="url(#arr1)"/>
+<line x1="371" y1="353" x2="384" y2="353" stroke="#6366f1" stroke-width="1.2" marker-end="url(#arr1)"/>
+<line x1="541" y1="353" x2="554" y2="353" stroke="#6366f1" stroke-width="1.2" marker-end="url(#arr1)"/>
+<line x1="711" y1="353" x2="724" y2="353" stroke="#6366f1" stroke-width="1.2" marker-end="url(#arr1)"/>
+<line x1="881" y1="353" x2="894" y2="353" stroke="#10b981" stroke-width="1.5" marker-end="url(#arr2)"/>
 
 <!-- Arrow down to IQ layers -->
-<line x1="600" y1="382" x2="600" y2="415" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr1)"/>
+<line x1="480" y1="384" x2="480" y2="414" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr1)"/>
 
 <!-- ─── MICROSOFT IQ LAYERS ─── -->
-<text x="600" y="432" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569" letter-spacing="2">MICROSOFT IQ INTELLIGENCE LAYERS</text>
-<line x1="46" y1="438" x2="310" y2="438" stroke="#1e293b" stroke-width="0.8"/>
-<line x1="890" y1="438" x2="1154" y2="438" stroke="#1e293b" stroke-width="0.8"/>
+<text x="480" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#475569" letter-spacing="2">MICROSOFT IQ INTELLIGENCE LAYERS</text>
+<line x1="46" y1="436" x2="270" y2="436" stroke="#1e293b" stroke-width="0.8"/>
+<line x1="690" y1="436" x2="914" y2="436" stroke="#1e293b" stroke-width="0.8"/>
 
 <!-- Foundry IQ -->
-<rect x="46" y="448" width="336" height="88" rx="10" fill="#0d1b3e" stroke="#6366f1" stroke-width="1.5" filter="url(#glow3)"/>
-<text x="214" y="468" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#818cf8">⬡  FOUNDRY IQ</text>
-<text x="214" y="484" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">Knowledge Base · Azure AI Search</text>
-<text x="214" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Certification guides · Skill breakdowns</text>
-<text x="214" y="514" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Synthetic study docs · Grounded answers</text>
-<text x="214" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#6366f1">→ Agents 2 + 5 (curator + assessment)</text>
+<rect x="46" y="446" width="290" height="88" rx="10" fill="#0d1b3e" stroke="#6366f1" stroke-width="1.5" filter="url(#glow3)"/>
+<text x="191" y="466" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#818cf8">⬡  FOUNDRY IQ</text>
+<text x="191" y="481" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">Knowledge Base · Azure AI Search</text>
+<text x="191" y="496" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Cert guides · Skill breakdowns</text>
+<text x="191" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Synthetic study docs</text>
+<text x="191" y="526" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#6366f1">→ Curator + Assessment agents</text>
 
 <!-- Work IQ -->
-<rect x="432" y="448" width="336" height="88" rx="10" fill="#0a1a0f" stroke="#10b981" stroke-width="1.5" filter="url(#glow3)"/>
-<text x="600" y="468" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#4ade80">⬡  WORK IQ</text>
-<text x="600" y="484" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">Work Context · M365 Signals</text>
-<text x="600" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Meeting load · Focus windows</text>
-<text x="600" y="514" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Calendar signals · Preferred slots</text>
-<text x="600" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#10b981">→ Agents 3 + 4 + 6 (planner · engagement · manager)</text>
+<rect x="356" y="446" width="248" height="88" rx="10" fill="#0a1a0f" stroke="#10b981" stroke-width="1.5" filter="url(#glow3)"/>
+<text x="480" y="466" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#4ade80">⬡  WORK IQ</text>
+<text x="480" y="481" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">Work Context · M365 Signals</text>
+<text x="480" y="496" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Meeting load · Focus windows</text>
+<text x="480" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Calendar · Preferred slots</text>
+<text x="480" y="526" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#10b981">→ Planner · Engagement · Manager</text>
 
 <!-- Fabric IQ -->
-<rect x="818" y="448" width="336" height="88" rx="10" fill="#160a28" stroke="#8b5cf6" stroke-width="1.5" filter="url(#glow3)"/>
-<text x="986" y="468" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#a78bfa">⬡  FABRIC IQ</text>
-<text x="986" y="484" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">Semantic Layer · Ontology</text>
-<text x="986" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Entity types · Archetypes · Lineage</text>
-<text x="986" y="514" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Business meaning · Semantic models</text>
-<text x="986" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#8b5cf6">→ Creative nucleus — powers all 7 entity narratives</text>
+<rect x="624" y="446" width="290" height="88" rx="10" fill="#160a28" stroke="#8b5cf6" stroke-width="1.5" filter="url(#glow3)"/>
+<text x="769" y="466" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#a78bfa">⬡  FABRIC IQ</text>
+<text x="769" y="481" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">Semantic Layer · Ontology</text>
+<text x="769" y="496" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">7 Entities · 7 Relationships</text>
+<text x="769" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Archetypes · Lineage · Events</text>
+<text x="769" y="526" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#8b5cf6">→ Creative nucleus — all narratives</text>
 
-<!-- Upward arrows IQ → pipeline -->
-<line x1="214" y1="448" x2="214" y2="395" stroke="#6366f1" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr1)"/>
-<line x1="600" y1="448" x2="498" y2="395" stroke="#10b981" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr2)"/>
-<line x1="986" y1="448" x2="866" y2="395" stroke="#8b5cf6" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr3)"/>
+<!-- IQ upward arrows to pipeline -->
+<line x1="191" y1="446" x2="191" y2="392" stroke="#6366f1" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr1)"/>
+<line x1="480" y1="446" x2="463" y2="392" stroke="#10b981" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr2)"/>
+<line x1="769" y1="446" x2="803" y2="392" stroke="#8b5cf6" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr3)"/>
+
+<!-- ─── MCP FEEDS FROM FABRIC IQ ─── -->
+<line x1="914" y1="490" x2="1025" y2="380" stroke="#10b981" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+
+<!-- ─── GITHUB COPILOT BADGE ─── -->
+<rect x="930" y="446" width="224" height="88" rx="10" fill="#060f08" stroke="#10b981" stroke-width="1.5" filter="url(#glow3)"/>
+<text x="1042" y="466" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#4ade80">◈  GITHUB COPILOT</text>
+<text x="1042" y="482" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">AI-Assisted Development</text>
+<text x="1042" y="497" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">SVG Canvas · Lore Pipeline</text>
+<text x="1042" y="511" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b">CSS Theme · MCP Server</text>
+<text x="1042" y="526" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" fill="#4ade80">Eval Suite · Bug Fixes</text>
 
 <!-- ─── TECH STACK BAR ─── -->
 <rect x="46" y="558" width="1108" height="48" rx="8" fill="#050810" stroke="#1e293b" stroke-width="1"/>
-<text x="600" y="573" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#334155" letter-spacing="2">TECH STACK</text>
-<text x="150" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="600" fill="#818cf8">Python + Streamlit</text>
-<text x="310" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="600" fill="#4ade80">GitHub Copilot</text>
-<text x="470" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="600" fill="#a78bfa">Fabric IQ Ontology</text>
-<text x="630" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="600" fill="#06b6d4">SVG Canvas Engine</text>
-<text x="800" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="600" fill="#f59e0b">Cinzel + Crimson Pro</text>
-<text x="980" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="600" fill="#818cf8">78-Test Eval Suite</text>
-<line x1="230" y1="562" x2="230" y2="600" stroke="#1e293b" stroke-width="0.8"/>
-<line x1="390" y1="562" x2="390" y2="600" stroke="#1e293b" stroke-width="0.8"/>
-<line x1="550" y1="562" x2="550" y2="600" stroke="#1e293b" stroke-width="0.8"/>
-<line x1="710" y1="562" x2="710" y2="600" stroke="#1e293b" stroke-width="0.8"/>
-<line x1="890" y1="562" x2="890" y2="600" stroke="#1e293b" stroke-width="0.8"/>
+<text x="600" y="572" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#334155" letter-spacing="2">TECH STACK</text>
+<text x="135" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" font-weight="600" fill="#818cf8">Python + Streamlit</text>
+<text x="285" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" font-weight="600" fill="#4ade80">MCP FastMCP SDK</text>
+<text x="435" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" font-weight="600" fill="#a78bfa">Fabric IQ Ontology</text>
+<text x="585" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" font-weight="600" fill="#06b6d4">SVG Canvas Engine</text>
+<text x="750" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" font-weight="600" fill="#f59e0b">GitHub Copilot</text>
+<text x="900" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" font-weight="600" fill="#818cf8">78-Test Eval Suite</text>
+<text x="1060" y="592" text-anchor="middle" font-family="Arial,sans-serif" font-size="9.5" font-weight="600" fill="#94a3b8">Cinzel + Crimson Pro</text>
+<line x1="210" y1="562" x2="210" y2="600" stroke="#1e293b" stroke-width="0.8"/>
+<line x1="360" y1="562" x2="360" y2="600" stroke="#1e293b" stroke-width="0.8"/>
+<line x1="510" y1="562" x2="510" y2="600" stroke="#1e293b" stroke-width="0.8"/>
+<line x1="660" y1="562" x2="660" y2="600" stroke="#1e293b" stroke-width="0.8"/>
+<line x1="836" y1="562" x2="836" y2="600" stroke="#1e293b" stroke-width="0.8"/>
+<line x1="964" y1="562" x2="964" y2="600" stroke="#1e293b" stroke-width="0.8"/>
+
+<!-- ─── MCP TOOLS DETAIL ROW ─── -->
+<rect x="46" y="626" width="1108" height="62" rx="8" fill="#060f08" stroke="#10b981" stroke-width="1.2"/>
+<text x="600" y="641" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#10b981" letter-spacing="2">◈  MCP SERVER TOOLS — GITHUB COPILOT AGENT MODE</text>
+<rect x="62" y="648" width="244" height="28" rx="5" fill="#0a1a0f" stroke="#10b981" stroke-width="0.8"/>
+<text x="184" y="662" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="600" fill="#4ade80">get_entity_lore(entity_id)</text>
+<text x="184" y="674" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">Poetic narrative for any node</text>
+<rect x="322" y="648" width="244" height="28" rx="5" fill="#0a1a0f" stroke="#10b981" stroke-width="0.8"/>
+<text x="444" y="662" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="600" fill="#4ade80">list_fabric_entities()</text>
+<text x="444" y="674" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">All 7 entities with health status</text>
+<rect x="582" y="648" width="244" height="28" rx="5" fill="#0a1a0f" stroke="#10b981" stroke-width="0.8"/>
+<text x="704" y="662" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="600" fill="#4ade80">get_fabric_health()</text>
+<text x="704" y="674" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">Full fabric health + anomalies</text>
+<rect x="842" y="648" width="296" height="28" rx="5" fill="#0a1a0f" stroke="#10b981" stroke-width="0.8"/>
+<text x="990" y="662" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="600" fill="#4ade80">get_entity_lineage(entity_id)</text>
+<text x="990" y="674" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">Upstream + downstream map</text>
 
 <!-- ─── FOOTER ─── -->
-<text x="600" y="640" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#334155" letter-spacing="1.5">✦  AETHER WEAVER  ·  MICROSOFT AGENTS LEAGUE 2026  ·  CREATIVE APPS TRACK  ·  FABRIC IQ + GITHUB COPILOT</text>
-<text x="600" y="658" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#1e293b" font-style="italic">All data is synthetic — for demonstration purposes only</text>
+<text x="600" y="720" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#334155" letter-spacing="1.5">✦  AETHER WEAVER  ·  MICROSOFT AGENTS LEAGUE 2026  ·  CREATIVE APPS TRACK  ·  FABRIC IQ + GITHUB COPILOT + MCP</text>
+<text x="600" y="738" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#1e293b" font-style="italic">All data is synthetic — for demonstration purposes only  ·  Built entirely with GitHub Copilot</text>
 
 <!-- Border -->
-<rect x="1" y="1" width="1198" height="678" rx="12" fill="none" stroke="#1e293b" stroke-width="2"/>
+<rect x="1" y="1" width="1198" height="778" rx="12" fill="none" stroke="#1e293b" stroke-width="2"/>
 </svg>
 </body>
 </html>
