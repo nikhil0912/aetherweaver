@@ -1,0 +1,217 @@
+{
+  "fabric_name": "Synthex Enterprise Data Fabric",
+  "description": "A synthetic enterprise data fabric for demonstration. All entities, names, and metrics are fabricated.",
+  "entities": [
+    {
+      "id": "E001",
+      "name": "Sales_Transactions_Lakehouse",
+      "type": "Lakehouse",
+      "archetype": "Source of Truth",
+      "description": "Raw sales data from various POS systems across all regions.",
+      "owner": "data-team@synthex.demo",
+      "upstream": [
+        "E002",
+        "E007"
+      ],
+      "downstream": [
+        "E003",
+        "E004"
+      ],
+      "activity": {
+        "refresh_frequency_hours": 1,
+        "reads_last_24h": 5800,
+        "writes_last_24h": 120,
+        "health_status": "healthy",
+        "last_refresh": "2026-06-10T08:30:00Z",
+        "anomalies": []
+      },
+      "x": 500,
+      "y": 300
+    },
+    {
+      "id": "E002",
+      "name": "POS_Feeds_Dataflow",
+      "type": "Dataflow",
+      "archetype": "Transformer",
+      "description": "Ingests and transforms raw point-of-sale data from 47 retail locations.",
+      "owner": "ingestion-team@synthex.demo",
+      "upstream": [],
+      "downstream": [
+        "E001"
+      ],
+      "activity": {
+        "refresh_frequency_hours": 1,
+        "reads_last_24h": 1200,
+        "writes_last_24h": 980,
+        "health_status": "healthy",
+        "last_refresh": "2026-06-10T08:15:00Z",
+        "anomalies": []
+      },
+      "x": 230,
+      "y": 180
+    },
+    {
+      "id": "E003",
+      "name": "Sales_KPI_Semantic_Model",
+      "type": "Semantic Model",
+      "archetype": "Oracle",
+      "description": "Curated semantic layer defining measures, hierarchies, and relationships for sales analytics.",
+      "owner": "analytics-team@synthex.demo",
+      "upstream": [
+        "E001"
+      ],
+      "downstream": [
+        "E004",
+        "E005"
+      ],
+      "activity": {
+        "refresh_frequency_hours": 4,
+        "reads_last_24h": 3200,
+        "writes_last_24h": 45,
+        "health_status": "healthy",
+        "last_refresh": "2026-06-10T06:00:00Z",
+        "anomalies": []
+      },
+      "x": 770,
+      "y": 180
+    },
+    {
+      "id": "E004",
+      "name": "Daily_Sales_Report",
+      "type": "Power BI Report",
+      "archetype": "Deliverer",
+      "description": "Executive-facing daily sales performance report delivered to 140 stakeholders.",
+      "owner": "reporting-team@synthex.demo",
+      "upstream": [
+        "E001",
+        "E003"
+      ],
+      "downstream": [],
+      "activity": {
+        "refresh_frequency_hours": 24,
+        "reads_last_24h": 8400,
+        "writes_last_24h": 1,
+        "health_status": "healthy",
+        "last_refresh": "2026-06-10T07:00:00Z",
+        "anomalies": []
+      },
+      "x": 770,
+      "y": 420
+    },
+    {
+      "id": "E005",
+      "name": "Customer_360_Warehouse",
+      "type": "Data Warehouse",
+      "archetype": "Guardian",
+      "description": "Unified customer profile warehouse combining CRM, purchase history, and support interactions.",
+      "owner": "platform-team@synthex.demo",
+      "upstream": [
+        "E003"
+      ],
+      "downstream": [
+        "E006"
+      ],
+      "activity": {
+        "refresh_frequency_hours": 6,
+        "reads_last_24h": 2100,
+        "writes_last_24h": 340,
+        "health_status": "warning",
+        "last_refresh": "2026-06-10T04:00:00Z",
+        "anomalies": [
+          "Schema drift detected in customer_segments table",
+          "3 null values in required field: customer_tier"
+        ]
+      },
+      "x": 1050,
+      "y": 300
+    },
+    {
+      "id": "E006",
+      "name": "Churn_Prediction_Model",
+      "type": "ML Model",
+      "archetype": "Seer",
+      "description": "Real-time customer churn prediction model scoring 2.3M customers weekly.",
+      "owner": "ml-team@synthex.demo",
+      "upstream": [
+        "E005"
+      ],
+      "downstream": [],
+      "activity": {
+        "refresh_frequency_hours": 168,
+        "reads_last_24h": 890,
+        "writes_last_24h": 0,
+        "health_status": "idle",
+        "last_refresh": "2026-06-07T00:00:00Z",
+        "anomalies": []
+      },
+      "x": 1050,
+      "y": 480
+    },
+    {
+      "id": "E007",
+      "name": "Inventory_Event_Stream",
+      "type": "Event Stream",
+      "archetype": "Pulse",
+      "description": "Real-time inventory level events from 200 warehouse locations, processing 50K events/min.",
+      "owner": "ops-team@synthex.demo",
+      "upstream": [],
+      "downstream": [
+        "E001"
+      ],
+      "activity": {
+        "refresh_frequency_hours": 0,
+        "reads_last_24h": 72000000,
+        "writes_last_24h": 72000000,
+        "health_status": "healthy",
+        "last_refresh": "2026-06-10T09:00:00Z",
+        "anomalies": []
+      },
+      "x": 230,
+      "y": 420
+    }
+  ],
+  "relationships": [
+    {
+      "from": "E002",
+      "to": "E001",
+      "type": "feeds",
+      "throughput": "high"
+    },
+    {
+      "from": "E007",
+      "to": "E001",
+      "type": "streams",
+      "throughput": "extreme"
+    },
+    {
+      "from": "E001",
+      "to": "E003",
+      "type": "powers",
+      "throughput": "high"
+    },
+    {
+      "from": "E001",
+      "to": "E004",
+      "type": "feeds",
+      "throughput": "medium"
+    },
+    {
+      "from": "E003",
+      "to": "E004",
+      "type": "enriches",
+      "throughput": "medium"
+    },
+    {
+      "from": "E003",
+      "to": "E005",
+      "type": "feeds",
+      "throughput": "medium"
+    },
+    {
+      "from": "E005",
+      "to": "E006",
+      "type": "scores",
+      "throughput": "low"
+    }
+  ]
+}
