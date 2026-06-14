@@ -1,4 +1,3 @@
-ric ontology · JSON
 {
   "fabric_name": "Synthex Enterprise Data Fabric",
   "description": "A synthetic enterprise data fabric for demonstration. All entities, names, and metrics are fabricated.",
