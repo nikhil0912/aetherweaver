@@ -704,6 +704,27 @@ st.markdown("""
 
 st.markdown("<div style='height:20px'></div>", unsafe_allow_html=True)
 
+# ── Demo Mode Banner ──────────────────────────────────────────────
+st.markdown("""
+<div style="margin: 0 24px 20px 24px;
+     background: linear-gradient(90deg, rgba(74,222,128,0.06) 0%, rgba(167,139,250,0.06) 100%);
+     border: 1px solid rgba(74,222,128,0.2);
+     border-radius: 10px; padding: 11px 20px;
+     display: flex; align-items: center; gap: 14px;">
+  <span style="font-size: 15px;">🟢</span>
+  <div style="flex: 1;">
+    <span style="color: #4ade80; font-weight: 600; font-size: 12px;
+          letter-spacing: 0.05em; text-transform: uppercase;">Demo Mode</span>
+    <span style="color: #94a3b8; font-size: 12px; margin-left: 10px;">
+      Running fully offline · All Fabric IQ data is synthetic · 5 MCP tools active · No credentials required
+    </span>
+  </div>
+  <span style="font-family: monospace; color: #475569; font-size: 11px;">
+    v1.0 · 7 entities · 78 tests
+  </span>
+</div>
+""", unsafe_allow_html=True)
+
 # ── MAIN LAYOUT ────────────────────────────────────────────────────
 col_canvas, col_lore = st.columns([3, 2], gap="medium")
 
