@@ -52,7 +52,7 @@ st.markdown("""
   /* ── Hero Header ── */
   .aw-hero {
     background: linear-gradient(180deg, rgba(13,27,62,0.9) 0%, rgba(6,8,16,0) 100%);
-    padding: 32px 48px 20px;
+    padding: 20px 48px 14px;
     border-bottom: 1px solid rgba(99,102,241,0.15);
     position: relative;
     overflow: hidden;
@@ -69,7 +69,7 @@ st.markdown("""
   }
   .aw-title {
     font-family: 'Cinzel', serif;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
     background: linear-gradient(135deg, #c7d2fe 0%, #818cf8 40%, #6366f1 70%, #a78bfa 100%);
     -webkit-background-clip: text;
@@ -470,12 +470,12 @@ def format_number(n: int) -> str:
 
 # ── Build SVG Canvas ──────────────────────────────────────────────
 def build_fabric_svg(selected_id: str = None) -> str:
-    W, H = 1100, 420
+    W, H = 1100, 540
     entity_map = {e["id"]: e for e in entities}
 
     svg_parts = [
         f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" '
-        f'style="width:100%;background:transparent;">',
+        f'style="width:100%;max-height:560px;background:transparent;display:block;">',
         '<defs>',
     ]
 
