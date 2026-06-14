@@ -357,3 +357,92 @@ def get_entity_lineage(entity_id: str) -> str:
 # ── Entry point ────────────────────────────────────────────────────
 if __name__ == "__main__":
     mcp.run(transport="stdio")
+
+
+# ── Tool 5: compare_entities ───────────────────────────────────────
+@mcp.tool()
+def compare_entities(entity_id_a: str, entity_id_b: str) -> str:
+    """
+    Compare two Fabric IQ entities side by side — contrasting their
+    archetypes, health status, activity levels, and lineage positions.
+    Returns a narrative contrast revealing how they relate within
+    the broader data fabric story.
+
+    Args:
+        entity_id_a: First entity ID (e.g. E001)
+        entity_id_b: Second entity ID (e.g. E005)
+
+    Returns:
+        Side-by-side comparison table + narrative contrast.
+    """
+    entity_a = get_entity_by_id(entity_id_a)
+    entity_b = get_entity_by_id(entity_id_b)
+
+    if "error" in entity_a:
+        return f"Error: {entity_a['error']}"
+    if "error" in entity_b:
+        return f"Error: {entity_b['error']}"
+
+    rel_a = get_entity_relationships(entity_id_a)
+    rel_b = get_entity_relationships(entity_id_b)
+
+    name_a = entity_a["name"].replace("_", " ")
+    name_b = entity_b["name"].replace("_", " ")
+    act_a = entity_a["activity"]
+    act_b = entity_b["activity"]
+
+    a_downstream_ids = [d["id"] for d in rel_a.get("downstream", [])]
+    a_upstream_ids = [u["id"] for u in rel_a.get("upstream", [])]
+
+    if entity_id_b in a_upstream_ids:
+        relationship = f"**{name_b}** feeds into **{name_a}** — they are directly connected."
+    elif entity_id_b in a_downstream_ids:
+        relationship = f"**{name_a}** feeds into **{name_b}** — they are directly connected."
+    else:
+        relationship = f"**{name_a}** and **{name_b}** operate as independent nodes in the fabric."
+
+    health_map = {"healthy": "thriving", "warning": "troubled",
+                  "idle": "dormant", "error": "broken"}
+    mood_a = health_map.get(act_a["health_status"], "present")
+    mood_b = health_map.get(act_b["health_status"], "present")
+    reads_a = act_a["reads_last_24h"]
+    reads_b = act_b["reads_last_24h"]
+
+    if reads_a > reads_b * 2:
+        activity_contrast = f"**{name_a}** commands far greater attention ({reads_a:,} vs {reads_b:,} reads/24h)."
+    elif reads_b > reads_a * 2:
+        activity_contrast = f"**{name_b}** commands far greater attention ({reads_b:,} vs {reads_a:,} reads/24h)."
+    else:
+        activity_contrast = f"Both attract similar levels of attention ({reads_a:,} vs {reads_b:,} reads/24h)."
+
+    lines = [
+        f"# ✦ Fabric Contrast — {name_a} vs {name_b}",
+        "",
+        f"## Relationship",
+        relationship,
+        "",
+        "## Side-by-Side Comparison",
+        f"| Attribute | {name_a} | {name_b} |",
+        "|---|---|---|",
+        f"| Type | {entity_a['type']} | {entity_b['type']} |",
+        f"| Archetype | {entity_a['archetype']} | {entity_b['archetype']} |",
+        f"| Health | {act_a['health_status'].upper()} | {act_b['health_status'].upper()} |",
+        f"| Reads/24h | {reads_a:,} | {reads_b:,} |",
+        f"| Writes/24h | {act_a['writes_last_24h']:,} | {act_b['writes_last_24h']:,} |",
+        f"| Anomalies | {len(act_a.get('anomalies', []))} | {len(act_b.get('anomalies', []))} |",
+        f"| Upstream | {len(rel_a.get('upstream', []))} | {len(rel_b.get('upstream', []))} |",
+        f"| Downstream | {len(rel_a.get('downstream', []))} | {len(rel_b.get('downstream', []))} |",
+        "",
+        "## Narrative Contrast",
+        (
+            f"Where **{name_a}** stands {mood_a} at the heart of its domain, "
+            f"**{name_b}** moves through the fabric in a state of {mood_b} purpose. "
+            f"{activity_contrast} "
+            f"One bears the archetype of {entity_a['archetype']} — the other, {entity_b['archetype']}. "
+            f"Together they reveal the balance of forces that animate the Synthex data fabric."
+        ),
+        "",
+        "*📎 Fabric IQ Synthetic Ontology — Synthex Enterprise Data Fabric (Demo)*",
+    ]
+
+    return "\n".join(lines)
