@@ -3,7 +3,30 @@
 > **Microsoft Agents League Hackathon 2026 · Creative Apps Track**
 > Built entirely with GitHub Copilot · Powered by Microsoft Fabric IQ
 
-![Aether Weaver](architecture.png)
+![Aether Weaver Banner](banner.png)
+
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Open%20App-FF4B4B?style=for-the-badge)](https://aether-weaver.streamlit.app/)
+[![Tests](https://img.shields.io/badge/tests-78%2F78%20passing-brightgreen?style=for-the-badge)]()
+[![MCP](https://img.shields.io/badge/MCP-5%20tools-a78bfa?style=for-the-badge)]()
+[![Built with](https://img.shields.io/badge/built%20with-GitHub%20Copilot-4ade80?style=for-the-badge)]()
+
+> 🚀 **[Try the live demo →](https://aether-weaver.streamlit.app/)** — no setup required
+
+---
+
+## 📸 Dashboard Screenshots
+
+### The Cosmic Fabric Canvas
+![Cosmic Canvas](screenshot_1_canvas.png)
+
+### Lore Weaver Narrative — Healthy Entity
+![Healthy Narrative](screenshot_2_narrative.png)
+
+### Lore Weaver Narrative — Warning Entity (with Shadow Clause)
+![Warning Narrative](screenshot_3_warning.png)
+
+### Architecture Diagram
+![Architecture](architecture.png)
 
 ---
 
