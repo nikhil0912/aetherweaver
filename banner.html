@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Aether Weaver Banner</title>
+<style>
+  body { margin:0; background:#000; display:flex; justify-content:center; align-items:center; min-height:100vh; padding:20px; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 1600 840" xmlns="http://www.w3.org/2000/svg" width="1600" height="840">
+<defs>
+  <!-- Cosmic background -->
+  <radialGradient id="cosmicBg" cx="50%" cy="50%" r="80%">
+    <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1"/>
+    <stop offset="40%" style="stop-color:#0f0a2e;stop-opacity:1"/>
+    <stop offset="100%" style="stop-color:#000000;stop-opacity:1"/>
+  </radialGradient>
+  
+  <radialGradient id="centralPulse" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.3"/>
+    <stop offset="100%" style="stop-color:#000000;stop-opacity:0"/>
+  </radialGradient>
+
+  <!-- Title gradient — cosmic shimmer -->
+  <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" style="stop-color:#c7d2fe"/>
+    <stop offset="35%" style="stop-color:#a78bfa"/>
+    <stop offset="65%" style="stop-color:#818cf8"/>
+    <stop offset="100%" style="stop-color:#f0abfc"/>
+  </linearGradient>
+
+  <!-- Filters -->
+  <filter id="cosmicGlow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="bigCosmicGlow"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="softCosmicGlow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+
+  <!-- Node gradients - 7 entity types -->
+  <radialGradient id="lakehouseGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1"/>
+    <stop offset="60%" style="stop-color:#f59e0b;stop-opacity:0.5"/>
+    <stop offset="100%" style="stop-color:#d97706;stop-opacity:0"/>
+  </radialGradient>
+  <radialGradient id="dataflowGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" style="stop-color:#10b981;stop-opacity:1"/>
+    <stop offset="60%" style="stop-color:#059669;stop-opacity:0.5"/>
+    <stop offset="100%" style="stop-color:#047857;stop-opacity:0"/>
+  </radialGradient>
+  <radialGradient id="semanticGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1"/>
+    <stop offset="60%" style="stop-color:#8b5cf6;stop-opacity:0.5"/>
+    <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
+  </radialGradient>
+  <radialGradient id="reportGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" style="stop-color:#f1f5f9;stop-opacity:0.95"/>
+    <stop offset="60%" style="stop-color:#cbd5e1;stop-opacity:0.4"/>
+    <stop offset="100%" style="stop-color:#94a3b8;stop-opacity:0"/>
+  </radialGradient>
+  <radialGradient id="warningGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1"/>
+    <stop offset="60%" style="stop-color:#d97706;stop-opacity:0.5"/>
+    <stop offset="100%" style="stop-color:#92400e;stop-opacity:0"/>
+  </radialGradient>
+  <radialGradient id="idleGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1"/>
+    <stop offset="60%" style="stop-color:#2563eb;stop-opacity:0.5"/>
+    <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0"/>
+  </radialGradient>
+  <radialGradient id="streamGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1"/>
+    <stop offset="60%" style="stop-color:#0891b2;stop-opacity:0.5"/>
+    <stop offset="100%" style="stop-color:#0e7490;stop-opacity:0"/>
+  </radialGradient>
+
+  <!-- Edge gradient with cosmic flow -->
+  <linearGradient id="edgeFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:0.1"/>
+    <stop offset="50%" style="stop-color:#a78bfa;stop-opacity:0.7"/>
+    <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:0.1"/>
+  </linearGradient>
+  <linearGradient id="edgeWarning" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.1"/>
+    <stop offset="50%" style="stop-color:#fbbf24;stop-opacity:0.7"/>
+    <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0.1"/>
+  </linearGradient>
+</defs>
+
+<!-- Background -->
+<rect width="1600" height="840" fill="url(#cosmicBg)"/>
+<rect width="1600" height="840" fill="url(#centralPulse)"/>
+
+<!-- Star field - distributed cosmic dust -->
+<g opacity="0.4">
+  <circle cx="120" cy="180" r="1" fill="#fff"/>
+  <circle cx="280" cy="90" r="1.5" fill="#fff"/>
+  <circle cx="420" cy="220" r="1" fill="#fff"/>
+  <circle cx="580" cy="100" r="1" fill="#fff"/>
+  <circle cx="780" cy="180" r="1.5" fill="#fff"/>
+  <circle cx="940" cy="90" r="1" fill="#fff"/>
+  <circle cx="1100" cy="200" r="1" fill="#fff"/>
+  <circle cx="1280" cy="120" r="1.5" fill="#fff"/>
+  <circle cx="1450" cy="180" r="1" fill="#fff"/>
+  <circle cx="160" cy="720" r="1" fill="#fff"/>
+  <circle cx="340" cy="780" r="1.5" fill="#fff"/>
+  <circle cx="540" cy="710" r="1" fill="#fff"/>
+  <circle cx="720" cy="770" r="1" fill="#fff"/>
+  <circle cx="900" cy="720" r="1.5" fill="#fff"/>
+  <circle cx="1100" cy="780" r="1" fill="#fff"/>
+  <circle cx="1300" cy="710" r="1" fill="#fff"/>
+  <circle cx="1480" cy="760" r="1.5" fill="#fff"/>
+</g>
+<g opacity="0.2">
+  <circle cx="200" cy="450" r="1" fill="#a78bfa"/>
+  <circle cx="380" cy="500" r="1" fill="#a78bfa"/>
+  <circle cx="1200" cy="500" r="1" fill="#a78bfa"/>
+  <circle cx="1380" cy="450" r="1" fill="#a78bfa"/>
+  <circle cx="60" cy="400" r="1.5" fill="#fbbf24"/>
+  <circle cx="1540" cy="400" r="1.5" fill="#fbbf24"/>
+</g>
+
+<!-- Title -->
+<text x="800" y="90" text-anchor="middle" font-family="Georgia, serif" font-size="68" font-weight="700" fill="url(#titleGrad)" filter="url(#cosmicGlow)" letter-spacing="1">
+  ✦ Aether Weaver
+</text>
+<text x="800" y="138" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-style="italic" fill="#cbd5e1" letter-spacing="1">
+  The Pulse of Your Data Fabric, Manifested
+</text>
+<text x="800" y="170" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#64748b" letter-spacing="3">
+  CREATIVE APPS TRACK · MICROSOFT AGENTS LEAGUE 2026
+</text>
+
+<!-- Badges -->
+<g transform="translate(580, 198)">
+  <rect x="0" y="0" width="155" height="32" rx="16" fill="rgba(167,139,250,0.15)" stroke="#a78bfa" stroke-width="1"/>
+  <text x="77" y="21" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#a78bfa">⬡ FABRIC IQ</text>
+</g>
+<g transform="translate(755, 198)">
+  <rect x="0" y="0" width="200" height="32" rx="16" fill="rgba(74,222,128,0.12)" stroke="#4ade80" stroke-width="1"/>
+  <text x="100" y="21" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#4ade80">◈ GITHUB COPILOT</text>
+</g>
+<g transform="translate(975, 198)">
+  <rect x="0" y="0" width="130" height="32" rx="16" fill="rgba(6,182,212,0.12)" stroke="#06b6d4" stroke-width="1"/>
+  <text x="65" y="21" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#06b6d4">◆ MCP SERVER</text>
+</g>
+
+<!-- ═══════ COSMIC NODE NETWORK ═══════ -->
+
+<!-- Edges first (so nodes overlay) -->
+<!-- E002 → E001 (Dataflow → Lakehouse) -->
+<path d="M 360 410 Q 500 380 640 470" stroke="url(#edgeFlow)" stroke-width="2.5" fill="none" opacity="0.7"/>
+<circle cx="500" cy="408" r="2.5" fill="#10b981" opacity="0.9" filter="url(#softCosmicGlow)"/>
+
+<!-- E007 → E001 (EventStream → Lakehouse) -->
+<path d="M 360 580 Q 500 580 640 510" stroke="url(#edgeFlow)" stroke-width="3" fill="none" opacity="0.8"/>
+<circle cx="450" cy="588" r="3" fill="#06b6d4" opacity="0.9" filter="url(#softCosmicGlow)"/>
+<circle cx="550" cy="568" r="3" fill="#06b6d4" opacity="0.9" filter="url(#softCosmicGlow)"/>
+
+<!-- E001 → E003 (Lakehouse → Semantic Model) -->
+<path d="M 720 470 Q 850 420 960 410" stroke="url(#edgeFlow)" stroke-width="2.5" fill="none" opacity="0.7"/>
+<circle cx="840" cy="430" r="2.5" fill="#a78bfa" opacity="0.9" filter="url(#softCosmicGlow)"/>
+
+<!-- E001 → E004 (Lakehouse → Report) -->
+<path d="M 720 510 Q 850 570 960 580" stroke="url(#edgeFlow)" stroke-width="2" fill="none" opacity="0.6"/>
+<circle cx="840" cy="555" r="2" fill="#cbd5e1" opacity="0.8" filter="url(#softCosmicGlow)"/>
+
+<!-- E003 → E004 (Semantic Model → Report) -->
+<path d="M 1010 440 Q 985 510 1010 555" stroke="url(#edgeFlow)" stroke-width="2" fill="none" opacity="0.6"/>
+
+<!-- E003 → E005 (Semantic Model → Warehouse - WARNING) -->
+<path d="M 1060 410 Q 1180 410 1280 470" stroke="url(#edgeWarning)" stroke-width="2.5" fill="none" opacity="0.7" stroke-dasharray="6,4"/>
+<circle cx="1180" cy="420" r="2.5" fill="#fbbf24" opacity="0.9" filter="url(#softCosmicGlow)"/>
+
+<!-- E005 → E006 (Warehouse → ML Model - IDLE) -->
+<path d="M 1330 510 Q 1330 555 1330 580" stroke="#3b82f6" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+<!-- ───── NODE: E002 — POS Feeds Dataflow (Transformer) ───── -->
+<g transform="translate(310, 410)">
+  <circle cx="0" cy="0" r="55" fill="url(#dataflowGrad)" filter="url(#bigCosmicGlow)"/>
+  <circle cx="0" cy="0" r="32" fill="rgba(2,6,23,0.85)" stroke="#10b981" stroke-width="2"/>
+  <text x="0" y="6" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22">🌊</text>
+</g>
+<text x="310" y="500" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#4ade80">POS Feeds Dataflow</text>
+<text x="310" y="517" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#64748b" letter-spacing="1">TRANSFORMER · HEALTHY</text>
+
+<!-- ───── NODE: E007 — Event Stream (Pulse) ───── -->
+<g transform="translate(310, 580)">
+  <circle cx="0" cy="0" r="55" fill="url(#streamGrad)" filter="url(#bigCosmicGlow)"/>
+  <circle cx="0" cy="0" r="32" fill="rgba(2,6,23,0.85)" stroke="#06b6d4" stroke-width="2"/>
+  <text x="0" y="6" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22">⚡</text>
+</g>
+<text x="310" y="670" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#06b6d4">Event Stream</text>
+<text x="310" y="687" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#64748b" letter-spacing="1">PULSE · 72M READS/24H</text>
+
+<!-- ───── NODE: E001 — Lakehouse (Source of Truth) [CENTRAL] ───── -->
+<g transform="translate(680, 490)">
+  <circle cx="0" cy="0" r="78" fill="url(#lakehouseGrad)" filter="url(#bigCosmicGlow)"/>
+  <circle cx="0" cy="0" r="46" fill="rgba(2,6,23,0.9)" stroke="#fbbf24" stroke-width="3"/>
+  <text x="0" y="8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="32">🏛️</text>
+  <!-- Pulse ring -->
+  <circle cx="0" cy="0" r="62" fill="none" stroke="#fbbf24" stroke-width="1.5" opacity="0.4"/>
+</g>
+<text x="680" y="600" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#fbbf24">Sales Transactions Lakehouse</text>
+<text x="680" y="619" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#64748b" letter-spacing="1">SOURCE OF TRUTH · 5.8K READS/24H</text>
+
+<!-- ───── NODE: E003 — Semantic Model (Oracle) ───── -->
+<g transform="translate(1010, 410)">
+  <circle cx="0" cy="0" r="55" fill="url(#semanticGrad)" filter="url(#bigCosmicGlow)"/>
+  <circle cx="0" cy="0" r="32" fill="rgba(2,6,23,0.85)" stroke="#a78bfa" stroke-width="2"/>
+  <text x="0" y="6" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22">🔮</text>
+</g>
+<text x="1010" y="500" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#a78bfa">Semantic Model</text>
+<text x="1010" y="517" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#64748b" letter-spacing="1">ORACLE · HEALTHY</text>
+
+<!-- ───── NODE: E004 — Report (Deliverer) ───── -->
+<g transform="translate(1010, 580)">
+  <circle cx="0" cy="0" r="55" fill="url(#reportGrad)" filter="url(#bigCosmicGlow)"/>
+  <circle cx="0" cy="0" r="32" fill="rgba(2,6,23,0.85)" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="0" y="6" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22">📊</text>
+</g>
+<text x="1010" y="670" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Daily Sales Report</text>
+<text x="1010" y="687" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#64748b" letter-spacing="1">DELIVERER · 8.4K VIEWS</text>
+
+<!-- ───── NODE: E005 — Warehouse (Guardian - WARNING) ───── -->
+<g transform="translate(1330, 490)">
+  <!-- Warning pulse ring (dashed) -->
+  <circle cx="0" cy="0" r="70" fill="none" stroke="#f59e0b" stroke-width="1.5" opacity="0.4" stroke-dasharray="5,4"/>
+  <circle cx="0" cy="0" r="60" fill="url(#warningGrad)" filter="url(#bigCosmicGlow)"/>
+  <circle cx="0" cy="0" r="35" fill="rgba(2,6,23,0.85)" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="0" y="6" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24">🏰</text>
+  <!-- Warning indicator -->
+  <circle cx="22" cy="-22" r="8" fill="#f59e0b" stroke="#000" stroke-width="1.5"/>
+  <text x="22" y="-18" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="900" fill="#000">!</text>
+</g>
+<text x="1330" y="585" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#f59e0b">Customer 360 Warehouse</text>
+<text x="1330" y="602" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#f59e0b" letter-spacing="1">⚠ GUARDIAN · SCHEMA DRIFT</text>
+
+<!-- ───── NODE: E006 — ML Model (Seer - IDLE) ───── -->
+<g transform="translate(1330, 660)">
+  <circle cx="0" cy="0" r="40" fill="url(#idleGrad)" filter="url(#cosmicGlow)" opacity="0.7"/>
+  <circle cx="0" cy="0" r="24" fill="rgba(2,6,23,0.85)" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="0" y="5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18">🧠</text>
+</g>
+<text x="1330" y="725" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600" fill="#3b82f6">Churn Model</text>
+<text x="1330" y="740" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="9" fill="#64748b" letter-spacing="1">SEER · IDLE</text>
+
+<!-- ═══════ LORE SCROLL — Narrative excerpt ═══════ -->
+<g transform="translate(80, 380)">
+  <rect x="0" y="0" width="180" height="320" rx="12" fill="rgba(15,23,42,0.7)" stroke="rgba(167,139,250,0.3)" stroke-width="1.5"/>
+  <text x="90" y="22" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="700" fill="#a78bfa" letter-spacing="2">THE LORE WEAVER SPEAKS</text>
+  <line x1="20" y1="32" x2="160" y2="32" stroke="rgba(167,139,250,0.2)"/>
+  <foreignObject x="14" y="40" width="152" height="270">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Georgia,serif;font-size:11px;line-height:1.6;color:#cbd5e1;font-style:italic;">
+      <p style="margin:0 0 8px 0;">"Deep within the Synthex data fabric stirs the <span style="color:#fbbf24;font-style:normal;font-weight:600;">Lakehouse</span> — the origin from which all knowing flows.</p>
+      <p style="margin:0 0 8px 0;">It draws its life from the <span style="color:#10b981;font-style:normal;font-weight:600;">Dataflow</span> and the eternal <span style="color:#06b6d4;font-style:normal;font-weight:600;">Event Stream</span>...</p>
+      <p style="margin:0;color:#94a3b8;font-size:10px;">Yet shadows stir in the <span style="color:#f59e0b;font-style:normal;font-weight:600;">Customer 360 Warehouse</span> — schema drift whispers through its chambers..."</p>
+    </div>
+  </foreignObject>
+</g>
+
+<!-- ═══════ MCP TOOLS PANEL (right side) ═══════ -->
+<g transform="translate(1500, 380)">
+  <rect x="-220" y="-40" width="0" height="0"/>
+</g>
+
+<!-- ═══════ KEY FEATURES BAR (bottom) ═══════ -->
+<g transform="translate(0, 752)">
+  <rect x="80" y="0" width="1440" height="72" rx="14" fill="rgba(15,23,42,0.7)" stroke="rgba(167,139,250,0.2)" stroke-width="1"/>
+  
+  <g transform="translate(220, 36)">
+    <text x="0" y="-2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800" fill="#fbbf24">7</text>
+    <text x="0" y="18" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#94a3b8" letter-spacing="1">FABRIC ENTITIES</text>
+  </g>
+  
+  <g transform="translate(460, 36)">
+    <text x="0" y="-2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800" fill="#a78bfa">5</text>
+    <text x="0" y="18" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#94a3b8" letter-spacing="1">MCP TOOLS</text>
+  </g>
+  
+  <g transform="translate(700, 36)">
+    <text x="0" y="-2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800" fill="#4ade80">6</text>
+    <text x="0" y="18" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#94a3b8" letter-spacing="1">STEP PIPELINE</text>
+  </g>
+  
+  <g transform="translate(940, 36)">
+    <text x="0" y="-2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800" fill="#06b6d4">7</text>
+    <text x="0" y="18" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#94a3b8" letter-spacing="1">ARCHETYPES</text>
+  </g>
+  
+  <g transform="translate(1180, 36)">
+    <text x="0" y="-2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800" fill="#ec4899">78</text>
+    <text x="0" y="18" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#94a3b8" letter-spacing="1">EVAL TESTS · 100%</text>
+  </g>
+  
+  <g transform="translate(1380, 36)">
+    <text x="0" y="-2" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="800" fill="#f0abfc">VS CODE</text>
+    <text x="0" y="18" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#94a3b8" letter-spacing="1">COPILOT INTEGRATION</text>
+  </g>
+</g>
+
+<!-- Border -->
+<rect x="2" y="2" width="1596" height="836" rx="16" fill="none" stroke="rgba(167,139,250,0.2)" stroke-width="2"/>
+</svg>
+</body>
+</html>
